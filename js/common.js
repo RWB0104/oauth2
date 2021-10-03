@@ -8,7 +8,7 @@ const API_URL = 'https://api.itcode.dev/oauth2';
  */
 function getParameters()
 {
-	return location.search.slice('?').split('&').reduce((acc, e) =>
+	return location.search.slice('1').split('&').reduce((acc, e) =>
 	{
 		const [ key, value ] = e.split('=');
 
