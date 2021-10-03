@@ -28,6 +28,9 @@ async function authorize(platform, code, state)
 {
 	const response = await fetch(`${API_URL}/api/login/${platform}`, {
 		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		},
 		credentials: 'include',
 		body: JSON.stringify({
 			code: code,
