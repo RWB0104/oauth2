@@ -41,7 +41,10 @@ function setAuthEvent()
  */
 async function login(platform)
 {
-	const response = await fetch(`${API_URL}/api/login/${platform}`, { method: 'GET' });
+	const response = await fetch(`${API_URL}/api/login/${platform}`, {
+		method: 'GET',
+		credentials: 'include'
+	});
 
 	const { ok, status } = response;
 	const json = await response.json();
