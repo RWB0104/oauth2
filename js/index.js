@@ -1,8 +1,8 @@
 /**
- * 인덱스 자바스크립트
+ * 인덱스 JavaScript
  *
  * @author RWB
- * @since 2021.10.02 Sat 15:06:53S
+ * @since 2021.10.02 Sat 15:06:53
  */
 
 /**
@@ -13,6 +13,9 @@ function init()
 	setAuthEvent();
 }
 
+/**
+ * 인증 버튼 이벤트 할당 메서드
+ */
 function setAuthEvent()
 {
 	const authButtons = document.getElementsByClassName('auth');
@@ -31,9 +34,14 @@ function setAuthEvent()
 	}
 }
 
+/**
+ * 로그인 메서드
+ *
+ * @param {string} platform: 플랫폼
+ */
 async function login(platform)
 {
-	const response = await fetch(`https://api.itcode.dev/oauth2/api/login/${platform}`, { method: 'GET' });
+	const response = await fetch(`${API_URL}/api/login/${platform}`, { method: 'GET' });
 
 	const { ok, status } = response;
 	const json = await response.json();
