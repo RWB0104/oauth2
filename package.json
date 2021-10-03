@@ -1,0 +1,12 @@
+{
+  "name": "oauth2",
+  "version": "1.0.0",
+  "description": "oauth test project",
+  "main": "index.html",
+  "author": "Kapoo",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  }
+}

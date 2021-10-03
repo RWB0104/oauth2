@@ -1,0 +1,131 @@
+html, body {
+	margin: 0px;
+	padding: 0px
+}
+
+main {
+	background-color: #020D1D;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	height: 100vh;
+}
+
+h1 {
+	font-size: 36px;
+}
+
+h1, h3, p {
+	color: white;
+
+	text-align: center;
+}
+
+.auth-wrap {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	gap: 20px;
+
+	padding: 50px;
+
+	background-color: white;
+	border-radius: 5px;
+}
+
+.auth-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	gap: 20px;
+}
+
+.info-item {
+	margin-top: 20px;
+
+	display: flex;
+	justify-content: flex-end;
+
+	gap: 20px;
+}
+
+.signal {
+	display: inline-block;
+
+	width: 10px;
+	height: 10px;
+
+	border-radius: 50%;
+}
+
+.signal.enabled {
+	background-color: limegreen;
+	box-shadow: 1px 1px 10px limegreen;
+}
+
+.signal.testabled {
+	background-color: orange;
+	box-shadow: 1px 1px 10px orange;
+}
+
+.signal.disabled {
+	background-color: orangered;
+	box-shadow: 1px 1px 10px orangered;
+}
+
+.auth {
+	display: flex;
+	flex-direction: row;
+	flex-basis: 100%;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+
+	padding: 10px;
+
+	border: 1px solid transparent;
+	border-radius: 5px;
+	box-shadow: 2px 2px 10px gainsboro;
+}
+
+.auth:hover {
+	cursor: pointer;
+}
+
+.auth > img {
+	flex-basis: 20px;
+
+	width: 20px;
+	height: 20px;
+}
+
+.auth > span {
+	flex-basis: 100%;
+
+	font-size: 18px;
+}
+
+.auth[data-platform=naver] {
+	background-color: #03C75A;
+	color: white;
+}
+
+.auth[data-platform=google] {
+	background-color: white;
+
+}
+
+.auth[data-platform=kakao] {
+	background-color: #FEE500;
+	color: black;
+}
+
+.auth[data-platform=github] {
+	background-color: #181717;
+	color: white;
+}

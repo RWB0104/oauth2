@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>OAuth 2.0 Project</title>
+
+	<link rel="stylesheet" href="/oauth2/css/index.css" />
+
+	<script src="/oauth2/js/index.js"></script>
+</head>
+
+<body onload="init()">
+	<main>
+		<section class="auth-section">
+			<h1>OAuth2.0 Project</h1>
+
+			<div class="auth-wrap">
+				<div class="auth-item">
+					<div class="signal testabled"></div>
+
+					<button class="auth" data-platform="naver">
+						<img src="/oauth2/assets/images/naver.png" alt="naver" />
+						<span>네이버 아이디로 로그인</span>
+					</button>
+				</div>
+
+				<div class="auth-item">
+					<div class="signal testabled"></div>
+
+					<button class="auth" data-platform="google">
+						<img src="/oauth2/assets/images/google.png" alt="google" />
+						<span>Google 아이디로 로그인</span>
+					</button>
+				</div>
+
+				<div class="auth-item">
+					<div class="signal disabled"></div>
+
+					<button class="auth" data-platform="kakao">
+						<img src="/oauth2/assets/images/kakao.png" alt="kakao" />
+						<span>카카오 아이디로 로그인</span>
+					</button>
+				</div>
+
+				<div class="auth-item">
+					<div class="signal disabled"></div>
+
+					<button class="auth" data-platform="github">
+						<img src="/oauth2/assets/images/github.png" alt="github" />
+						<span>GitHub 아이디로 로그인</span>
+					</button>
+				</div>
+
+				<div class="info-item">
+					<span><span class="signal enabled"></span> <span>활성화</span></span>
+					<span><span class="signal testabled"></span> <span>테스트모드 활성화</span></span>
+					<span><span class="signal disabled"></span> <span>비활성화</span></span>
+				</div>
+			</div>
+		</section>
+
+		<section class="notice-section">
+			<h3>이 페이지는 플랫폼 로그인 프로젝트 페이지이며, 그 어떤 정보도 서버에 저장하지 않습니다.</h3>
+
+			<p>This page is a platform login project page, and we don't save any information on this server.</p>
+		</section>
+	</main>
+</body>
+
+</html>
