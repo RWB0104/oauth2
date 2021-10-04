@@ -44,6 +44,7 @@ async function authorize(platform, code, state)
 	// 정상 응답일 경우
 	if (ok)
 	{
+		debugger;
 		location.href = `${ROOT_URL}/home`;
 	}
 
