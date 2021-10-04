@@ -44,7 +44,6 @@ async function authorize(platform, code, state)
 	// 정상 응답일 경우
 	if (ok)
 	{
-		debugger;
 		location.href = `${ROOT_URL}/home`;
 	}
 
@@ -54,5 +53,7 @@ async function authorize(platform, code, state)
 		const { title, message } = json;
 
 		alert(`[${status}] ${title}: ${message}`);
+
+		window.location = ROOT_URL;
 	}
 }

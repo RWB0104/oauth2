@@ -1,4 +1,4 @@
-const ROOT_URL = 'https://project.itcode.dev/oauth2';
+const ROOT_URL = '/oauth2';
 const API_URL = 'https://api.itcode.dev/oauth2';
 
 /**

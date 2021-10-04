@@ -8,12 +8,46 @@
 
 	<title>OAuth 2.0 Project</title>
 
+	<link rel="stylesheet" href="/oauth2/css/global.css" />
+	<link rel="stylesheet" href="/oauth2/css/home.css" />
+
 	<script src="/oauth2/js/common.js"></script>
+	<script src="/oauth2/js/home.js"></script>
 </head>
 
-<body>
+<body onload="init()">
 	<main>
-		<h1>home</h1>
+		<section class="user-section">
+			<div class="user-item" data-key="profile">
+				<img src="https://via.placeholder.com/100x100" alt="profile" width="100px" height="100px" />
+			</div>
+
+			<div class="user-item" data-key="id">
+				<b>계정 키</b>
+				<span>계정 키</span>
+			</div>
+
+			<div class="user-item" data-key="name">
+				<b>이름</b>
+				<span>이름 텍스트</span>
+			</div>
+
+			<div class="user-item" data-key="email">
+				<b>이메일</b>
+				<span>이메일 텍스트</span>
+			</div>
+
+			<div class="user-item" data-key="platform">
+				<b>플랫폼</b>
+				<span>플랫폼 텍스트</span>
+			</div>
+
+			<div class="user-item" data-key="logout">
+				<button>
+					<span>로그아웃</span>
+				</button>
+			</div>
+		</section>
 	</main>
 </body>
 

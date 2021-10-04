@@ -8,6 +8,7 @@
 
 	<title>OAuth 2.0 Project</title>
 
+	<link rel="stylesheet" href="/oauth2/css/global.css" />
 	<link rel="stylesheet" href="/oauth2/css/index.css" />
 
 	<script src="/oauth2/js/common.js"></script>
@@ -21,7 +22,7 @@
 
 			<div class="auth-wrap">
 				<div class="auth-item">
-					<div class="signal testabled"></div>
+					<div class="signal" data-status="testabled"></div>
 
 					<button class="auth" data-platform="naver">
 						<img src="/oauth2/assets/images/naver.png" alt="naver" />
@@ -30,7 +31,7 @@
 				</div>
 
 				<div class="auth-item">
-					<div class="signal testabled"></div>
+					<div class="signal" data-status="testabled"></div>
 
 					<button class="auth" data-platform="google">
 						<img src="/oauth2/assets/images/google.png" alt="google" />
@@ -39,7 +40,7 @@
 				</div>
 
 				<div class="auth-item">
-					<div class="signal disabled"></div>
+					<div class="signal" data-status="testabled"></div>
 
 					<button class="auth" data-platform="kakao">
 						<img src="/oauth2/assets/images/kakao.png" alt="kakao" />
@@ -48,7 +49,7 @@
 				</div>
 
 				<div class="auth-item">
-					<div class="signal disabled"></div>
+					<div class="signal" data-status="testabled"></div>
 
 					<button class="auth" data-platform="github">
 						<img src="/oauth2/assets/images/github.png" alt="github" />
@@ -57,9 +58,9 @@
 				</div>
 
 				<div class="info-item">
-					<span><span class="signal enabled"></span> <span>활성화</span></span>
-					<span><span class="signal testabled"></span> <span>테스트모드 활성화</span></span>
-					<span><span class="signal disabled"></span> <span>비활성화</span></span>
+					<span><span class="signal" data-status="enabled"></span> <span>활성화</span></span>
+					<span><span class="signal" data-status="testabled"></span> <span>테스트모드 활성화</span></span>
+					<span><span class="signal" data-status="disabled"></span> <span>비활성화</span></span>
 				</div>
 			</div>
 		</section>
