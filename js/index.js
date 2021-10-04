@@ -54,7 +54,7 @@ async function login(platform)
 	{
 		const { body } = json;
 
-		window.location = body;
+		location = body;
 	}
 
 	// 아닐 경우

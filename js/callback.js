@@ -44,7 +44,7 @@ async function authorize(platform, code, state)
 	// 정상 응답일 경우
 	if (ok)
 	{
-		window.location = `${ROOT_URL}/home`;
+		location.href = `${ROOT_URL}/home`;
 	}
 
 	// 아닐 경우
