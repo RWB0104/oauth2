@@ -13,3 +13,7 @@ main {
 
 	height: 100vh;
 }
+
+.title-wrap {
+	display: flex;
+}

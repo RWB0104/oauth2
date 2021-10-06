@@ -8,6 +8,9 @@
 
 	<title>OAuth 2.0 Project</title>
 
+	<link rel="shortcut icon" href="/oauth2/favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="/oauth2/favicon.ico" type="image/x-icon" />
+
 	<link rel="stylesheet" href="/oauth2/css/global.css" />
 	<link rel="stylesheet" href="/oauth2/css/index.css" />
 
@@ -18,7 +21,11 @@
 <body onload="init()">
 	<main>
 		<section class="auth-section">
-			<h1>OAuth2.0 Project</h1>
+			<div class="title-wrap">
+				<img src="/oauth2/assets/images/logo.png" alt="OAuth 2.0 Project" width="30" height="30" />
+
+				<h1>OAuth2.0 Project</h1>
+			</div>
 
 			<div class="auth-wrap">
 				<div class="auth-item">
@@ -49,7 +56,7 @@
 				</div>
 
 				<div class="auth-item">
-					<div class="signal" data-status="testabled"></div>
+					<div class="signal" data-status="enabled"></div>
 
 					<button class="auth" data-platform="github">
 						<img src="/oauth2/assets/images/github.png" alt="github" />
