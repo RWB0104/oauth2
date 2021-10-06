@@ -7,12 +7,10 @@
 
 /**
  * 페이지 초기화 메서드
- *
- * @param {string} platform: 플랫폼
  */
-function init(platform)
+function init()
 {
-	const { code, state } = getParameters();
+	const { code, state, platform } = getParameters();
 
 	authorize(platform, code, state);
 }
