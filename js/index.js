@@ -11,6 +11,7 @@
 function init()
 {
 	setAuthEvent();
+	autoLogin();
 }
 
 /**
@@ -63,5 +64,41 @@ async function login(platform)
 		const { title, message } = json;
 
 		alert(`[${status}] ${title}: ${message}`);
+	}
+}
+
+/**
+ * 자동 로그인 메서드
+ */
+async function autoLogin()
+{
+	const response = await fetch(`${API_URL}/api/login/auto`, {
+		method: 'POST',
+		credentials: 'include'
+	});
+
+	const { ok, status } = response;
+	const json = await response.json();
+
+	// 정상 응답일 경우
+	if (ok)
+	{
+		const { flag } = json;
+
+		// 자동 로그인에 성공할 경우
+		if (flag)
+		{
+			location.href = '/oauth2/home';
+		}
+	}
+
+	// 아닐 경우
+	else
+	{
+		const { title, message } = json;
+
+		alert(`[${status}] ${title}: ${message}`);
+
+		window.location = ROOT_URL;
 	}
 }

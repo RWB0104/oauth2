@@ -24,6 +24,13 @@ function init()
  */
 async function authorize(platform, code, state)
 {
+	if (platform === undefined)
+	{
+		alert('invalid access');
+
+		location.href = '/oauth2';
+	}
+
 	const response = await fetch(`${API_URL}/api/login/${platform}`, {
 		method: 'POST',
 		headers: {

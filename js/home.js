@@ -52,7 +52,7 @@ async function getUserInfo()
 		console.error(`[${status}] ${title}: ${message}`);
 		alert('올바르지 않은 접근');
 
-		window.location = ROOT_URL;
+		logout();
 	}
 }
 
