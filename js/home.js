@@ -16,7 +16,6 @@ function init()
 	{
 		document.querySelector('.user-item[data-key=profile] > img').src = json.profile;
 
-		document.querySelector('.user-item[data-key=id] > span').textContent = json.id;
 		document.querySelector('.user-item[data-key=name] > span').textContent = json.name;
 		document.querySelector('.user-item[data-key=email] > span').textContent = json.email;
 		document.querySelector('.user-item[data-key=platform] > span').textContent = json.platform;
