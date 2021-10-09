@@ -33,6 +33,12 @@
 	border-radius: 50%;
 }
 
+.user-item[data-key=platform] > .panel {
+	display: flex;
+
+	gap: 10px;
+}
+
 .user-item[data-key=logout] {
 	margin-top: 50px;
 }

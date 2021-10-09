@@ -38,6 +38,13 @@ h1, h3, p {
 	gap: 20px;
 }
 
+.info-item > span {
+	display: flex;
+	gap: 10px;
+
+	align-items: center;
+}
+
 .signal {
 	display: inline-block;
 
@@ -101,7 +108,6 @@ h1, h3, p {
 
 .auth[data-platform=google] {
 	background-color: white;
-
 }
 
 .auth[data-platform=kakao] {

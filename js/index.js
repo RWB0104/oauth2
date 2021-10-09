@@ -5,6 +5,8 @@
  * @since 2021.10.02 Sat 15:06:53
  */
 
+window.onload = init;
+
 /**
  * 페이지 초기화 메서드
  */
