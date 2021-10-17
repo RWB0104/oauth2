@@ -1,58 +1,66 @@
-html, body {
-	margin: 0px;
-	padding: 0px
+html,
+body {
+    margin: 0px;
+    padding: 0px
 }
 
 main {
-	background-color: #020D1D;
+    background-color: #020D1D;
 
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-	height: 100vh;
+    height: 100vh;
+}
+
+hr {
+    width: 100%;
+
+    border: 1px solid whitesmoke;
 }
 
 .title-wrap {
-	display: flex;
-	gap: 20px;
+    display: flex;
+    gap: 20px;
 
-	justify-content: center;
-	align-items: center;
+    justify-content: center;
+    align-items: center;
 
-	margin-bottom: 30px;
+    margin-bottom: 30px;
 
 
-	color: white;
+    color: white;
 }
 
 .title-wrap h1 {
-	font-size: 36px;
+    font-size: 36px;
 }
 
 .loading-wrapper {
-	animation: rotate 2s ease infinite;
+    animation: rotate 2s ease infinite;
 }
 
 .loading {
-	width: 100px;
-	height: 100px;
+    width: 100px;
+    height: 100px;
 }
 
 .loading path {
-	fill: royalblue;
+    fill: royalblue;
 }
 
 @keyframes rotate {
-	from {
-		-webkit-transform: rotate(0deg);
-		-o-transform: rotate(0deg);
-		transform: rotate(0deg);
-	}
-	to {
-		-webkit-transform: rotate(720deg);
-		-o-transform: rotate(720deg);
-		transform: rotate(720deg);
-	}
+    from {
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(720deg);
+        -o-transform: rotate(720deg);
+        transform: rotate(720deg);
+    }
 }

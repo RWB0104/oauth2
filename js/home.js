@@ -12,6 +12,7 @@ window.onload = init;
  */
 function init()
 {
+	document.querySelector('.user-item[data-key=reauth] > button').addEventListener('click', () => getReAuthUrl());
 	document.querySelector('.user-item[data-key=logout] > button').addEventListener('click', () => logout());
 
 	getUserInfo().then((json) =>
@@ -74,6 +75,33 @@ async function logout()
 	if (ok)
 	{
 		window.location = ROOT_URL;
+	}
+
+	// 아닐 경우
+	else
+	{
+		const { title, message } = json;
+
+		alert(`[${status}] ${title}: ${message}`);
+	}
+}
+
+async function getReAuthUrl()
+{
+	const response = await fetch(`${API_URL}/api/reauth`, {
+		method: 'GET',
+		credentials: 'include'
+	});
+
+	const { ok, status } = response;
+	const json = await response.json();
+
+	// 정상 응답일 경우
+	if (ok)
+	{
+		const { body } = json;
+
+		location = body;
 	}
 
 	// 아닐 경우

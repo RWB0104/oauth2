@@ -1,5 +1,5 @@
 const ROOT_URL = '/oauth2';
-const API_URL = 'https://api.itcode.dev/oauth2';
+const API_URL = 'https://devapi.itcode.dev/oauth2';
 
 /**
  * 파라미터 객체 반환 메서드
