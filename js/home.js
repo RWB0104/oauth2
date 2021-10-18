@@ -14,6 +14,7 @@ function init()
 {
 	document.querySelector('.user-item[data-key=reauth] > button').addEventListener('click', () => getReAuthUrl());
 	document.querySelector('.user-item[data-key=logout] > button').addEventListener('click', () => logout());
+	document.querySelector('.user-item[data-key=revoke] > button').addEventListener('click', () => revoke());
 
 	getUserInfo().then((json) =>
 	{
@@ -59,6 +60,46 @@ async function getUserInfo()
 }
 
 /**
+ * 정보 제공 재동의 메서드
+ */
+async function getReAuthUrl()
+{
+	const response = await fetch(`${API_URL}/api/reauth`, {
+		method: 'GET',
+		credentials: 'include'
+	});
+
+	const { ok, status } = response;
+	const json = await response.json();
+
+	// 정상 응답일 경우
+	if (ok)
+	{
+		const { flag, title, message, body } = json;
+
+		// 정상 동작일 경우
+		if (flag)
+		{
+			window.location = body;
+		}
+
+		// 아닐 경우
+		else
+		{
+			alert(`${title}: ${message}`);
+		}
+	}
+
+	// 아닐 경우
+	else
+	{
+		const { title, message } = json;
+
+		alert(`[${status}] ${title}: ${message}`);
+	}
+}
+
+/**
  * 로그아웃 메서드
  */
 async function logout()
@@ -86,25 +127,21 @@ async function logout()
 	}
 }
 
-async function getReAuthUrl()
+async function revoke()
 {
-	const response = await fetch(`${API_URL}/api/reauth`, {
-		method: 'GET',
+	const response = await fetch(`${API_URL}/api/revoke`, {
+		method: 'DELETE',
 		credentials: 'include'
 	});
 
 	const { ok, status } = response;
 	const json = await response.json();
 
-	// 정상 응답일 경우
 	if (ok)
 	{
-		const { body } = json;
-
-		location = body;
+		window.location = ROOT_URL;
 	}
 
-	// 아닐 경우
 	else
 	{
 		const { title, message } = json;

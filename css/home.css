@@ -29,17 +29,17 @@
 	margin-bottom: 50px;
 }
 
-.user-item[data-key=profile]>img {
+.user-item[data-key=profile] > img {
 	border-radius: 50%;
 }
 
-.user-item[data-key=platform]>.panel {
+.user-item[data-key=platform] > .panel {
 	display: flex;
 
 	gap: 10px;
 }
 
-.user-item>button {
+.user-item > button {
 	display: flex;
 	flex-direction: row;
 	flex-basis: 100%;
@@ -55,31 +55,31 @@
 	box-shadow: 2px 2px 10px gainsboro;
 }
 
-.user-item>button:hover {
+.user-item > button:hover {
 	cursor: pointer;
 }
 
-.user-item>button>img,
-.user-item>button>svg {
+.user-item > button > img,
+.user-item > button > svg {
 	flex-basis: 20px;
 
 	width: 20px;
 	height: 20px;
 }
 
-.user-item>button>span {
+.user-item > button > span {
 	flex-basis: 100%;
 
 	font-size: 14px;
 }
 
-.user-item[data-key=reauth]>button {
+.user-item[data-key=reauth] > button {
 	background-color: forestgreen;
 
 	color: white;
 }
 
-.user-item[data-key=delete]>button {
+.user-item[data-key=revoke] > button {
 	background-color: crimson;
 
 	color: white;
