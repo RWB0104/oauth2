@@ -12,9 +12,19 @@ window.onload = init;
  */
 function init()
 {
-	const { code, state, platform } = getParameters();
+	const { code, state, platform, error } = getParameters();
 
-	authorize(platform, code, state);
+	// 오류가 있을 경우
+	if (error)
+	{
+		location.href = ROOT_URL;
+	}
+
+	// 오류가 없을 경우
+	else
+	{
+		authorize(platform, code, state);
+	}
 }
 
 /**
@@ -26,11 +36,14 @@ function init()
  */
 async function authorize(platform, code, state)
 {
-	if (platform === undefined)
+	// 파라미터가 유효하지 않을 경우
+	if (platform === undefined || code === undefined || state === undefined)
 	{
 		alert('invalid access');
 
-		location.href = '/oauth2';
+		location.href = ROOT_URL;
+
+		return;
 	}
 
 	const response = await fetch(`${API_URL}/api/login/${platform}`, {

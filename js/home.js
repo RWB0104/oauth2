@@ -18,11 +18,13 @@ function init()
 
 	getUserInfo().then((json) =>
 	{
-		document.querySelector('.user-item[data-key=profile] > img').src = json.profile;
+		const { profile, name, email, platform } = json;
 
-		document.querySelector('.user-item[data-key=name] > span').textContent = json.name;
-		document.querySelector('.user-item[data-key=email] > span').textContent = json.email;
-		document.querySelector('.user-item[data-key=platform] > span').textContent = json.platform;
+		document.querySelector('.user-item[data-key=profile] > img').src = profile;
+
+		document.querySelector('.user-item[data-key=name] > span').textContent = name;
+		document.querySelector('.user-item[data-key=email] > span').textContent = email;
+		document.querySelector('.user-item[data-key=platform] > span').textContent = platform;
 	});
 }
 
@@ -127,6 +129,9 @@ async function logout()
 	}
 }
 
+/**
+ * 연동 해제 메서드
+ */
 async function revoke()
 {
 	const response = await fetch(`${API_URL}/api/revoke`, {
@@ -137,11 +142,13 @@ async function revoke()
 	const { ok, status } = response;
 	const json = await response.json();
 
+	// 정상 응답일 경우
 	if (ok)
 	{
 		window.location = ROOT_URL;
 	}
 
+	// 아닐 경우
 	else
 	{
 		const { title, message } = json;
