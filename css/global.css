@@ -1,18 +1,21 @@
 html,
 body {
     margin: 0px;
-    padding: 0px
+    padding: 0px;
+    background-color: #020D1D;
 }
 
 main {
-    background-color: #020D1D;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
     height: 100vh;
+}
+
+main > section {
+    min-width: 400px;
 }
 
 hr {
@@ -49,6 +52,25 @@ hr {
 
 .loading path {
     fill: royalblue;
+}
+
+@media (max-width: 960px) {
+    .title-wrap h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-height: 960px) {
+    main {
+        height: initial;
+
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    main > section {
+        min-width: initial;
+    }
 }
 
 @keyframes rotate {

@@ -1,8 +1,8 @@
-# OAuth2.0 Frontend
+# OAuth Project Frontend
 
 <p align="center"><img src="https://project.itcode.dev/oauth2/assets/images/logo.png" alt="logo" /></p>
 
-<h4 align="center">OAuth2.0 Frontend</h4>
+<h4 align="center"># </h4>
 
 ## 📙 Information
 

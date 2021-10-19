@@ -119,3 +119,17 @@ h1, h3, p {
 	background-color: #181717;
 	color: white;
 }
+
+@media (max-width: 960px) {
+	p, span {
+		font-size: 14px;
+	}
+
+    .auth-wrap {
+		padding: 30px;
+	}
+
+	.auth > span {
+		font-size: 14px;
+	}
+}
