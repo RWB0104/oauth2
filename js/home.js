@@ -12,7 +12,7 @@ window.onload = init;
  */
 function init()
 {
-	document.querySelector('.user-item[data-key=reauth] > button').addEventListener('click', () => getReAuthUrl());
+	document.querySelector('.user-item[data-key=reauth] > button').addEventListener('click', () => getPutAuthUrl());
 	document.querySelector('.user-item[data-key=logout] > button').addEventListener('click', () => logout());
 	document.querySelector('.user-item[data-key=revoke] > button').addEventListener('click', () => revoke());
 
@@ -64,10 +64,10 @@ async function getUserInfo()
 /**
  * 정보 제공 재동의 메서드
  */
-async function getReAuthUrl()
+async function getPutAuthUrl()
 {
-	const response = await fetch(`${API_URL}/api/reauth`, {
-		method: 'GET',
+	const response = await fetch(`${API_URL}/api/login/put`, {
+		method: 'PUT',
 		credentials: 'include'
 	});
 
