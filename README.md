@@ -30,6 +30,8 @@
 
 ## 📋 Contents
 
+![Animation](https://user-images.githubusercontent.com/50317129/138373743-ca6372cb-4c2e-4517-9190-4babdde6b98a.gif)
+
 지원하는 플랫폼은 아래와 같음
 
 * NAVER
