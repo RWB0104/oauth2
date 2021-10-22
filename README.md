@@ -2,7 +2,7 @@
 
 <p align="center"><img src="https://project.itcode.dev/oauth2/assets/images/logo.png" alt="logo" /></p>
 
-<h4 align="center"># </h4>
+<h4 align="center">OAuth Project Frontend</h4>
 
 ## 📙 Information
 
@@ -16,7 +16,7 @@
 
 ## 📥 Download
 
-* [최신 릴리즈](https://github.com/RWB0104/oauth2/releases/latest)
+* [최신 릴리즈](https://github.com/RWB0104/oauth2/tags)
 
 <br />
 <br />
