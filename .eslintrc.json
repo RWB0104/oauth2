@@ -11,7 +11,6 @@
 	},
 	"rules": {
 		"array-bracket-newline": ["error"],
-		"array-element-newline": ["error", "consistent"],
 		"block-spacing": ["error", "always"],
 		"brace-style": ["error", "allman"],
 		"comma-dangle": ["error", "never"],
