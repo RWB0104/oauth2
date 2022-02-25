@@ -8,6 +8,10 @@ h1, h3, p {
 	margin-top: 70px;
 }
 
+.notice-section img {
+	display: none;
+}
+
 .auth-wrap {
 	display: flex;
 	flex-direction: column;
