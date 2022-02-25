@@ -104,3 +104,16 @@ async function autoLogin()
 		window.location = ROOT_URL;
 	}
 }
+
+/**
+ * GA 동작 함수
+ */
+function gtag()
+{
+	dataLayer.push(arguments);
+}
+
+window.dataLayer = window.dataLayer || [];
+
+gtag('js', new Date());
+gtag('config', 'G-1YPNLPR0CQ');
