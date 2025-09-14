@@ -1,0 +1,113 @@
+{
+	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+	"extends": ["@itcode-dev/biome-config"],
+	"files": {
+		"includes": [
+			"!**/dist",
+			"!**/out",
+			"!**/public",
+			"!__mocks__/zustand.ts",
+			"!**/node_modules",
+			"!**/.nx",
+			"!**/.turbo",
+			"!**/storybook-static",
+			"!**/coverage",
+			"**/*.{js,jsx,ts,tsx,json,md,mdx,yml,yaml,html,css,scss,sass}"
+		]
+	},
+	"overrides": [
+		{
+			"assist": {
+				"actions": {
+					"source": {
+						"organizeImports": {
+							"level": "on",
+							"options": {
+								"groups": [
+									[":BUN:", ":NODE:"],
+									":BLANK_LINE:",
+									["@oauth2/root", "@oauth2/root/**"],
+									":BLANK_LINE:",
+									[
+										"@oauth2/base-app-ui-pack",
+										"@oauth2/base-app-ui-pack/**",
+										"@oauth2/blog-ui-pack",
+										"@oauth2/blog-ui-pack/**",
+										"@oauth2/piedit-ui-pack",
+										"@oauth2/piedit-ui-pack/**",
+										"@oauth2/root-ui-pack",
+										"@oauth2/root-ui-pack/**"
+									],
+									":BLANK_LINE:",
+									["@oauth2/global-ui-pack", "@oauth2/global-ui-pack/**"],
+									":BLANK_LINE:",
+									["@oauth2/headless-ui-pack", "@oauth2/headless-ui-pack/**"],
+									":BLANK_LINE:",
+									["@oauth2/api", "@oauth2/api/**", "@oauth2/state", "@oauth2/state/**"],
+									":BLANK_LINE:",
+									[
+										"@oauth2/common",
+										"@oauth2/common/**",
+										"@oauth2/test-config",
+										"@oauth2/test-config/**",
+										"@oauth2/markdown",
+										"@oauth2/markdown/**",
+										"@oauth2/storybook",
+										"@oauth2/storybook/**"
+									],
+									":BLANK_LINE:",
+									["@oauth2/**"],
+									":BLANK_LINE:",
+									[":PACKAGE:"],
+									":BLANK_LINE:",
+									[":ALIAS:"],
+									":BLANK_LINE:",
+									[":PATH:"]
+								],
+								"identifierOrder": "natural"
+							}
+						}
+					}
+				}
+			},
+			"includes": ["**/*.{tsx,ts}"],
+			"linter": {
+				"rules": {
+					"correctness": {
+						"noUndeclaredDependencies": "off"
+					},
+					"nursery": {
+						"noUnresolvedImports": "off"
+					}
+				}
+			}
+		},
+		{
+			"assist": {
+				"enabled": false
+			},
+			"formatter": {
+				"enabled": false
+			},
+			"includes": [
+				"node_modules",
+				"**/node_modules",
+				"packages/base-ui/headless-ui-pack/src/components/**",
+				"__mocks__/zustand.ts"
+			],
+			"linter": {
+				"enabled": false
+			}
+		},
+		{
+			"includes": ["**/*.spec.ts", "**/*.spec.tsx"],
+			"linter": {
+				"rules": {
+					"correctness": {
+						"noUndeclaredVariables": "off"
+					}
+				}
+			}
+		}
+	]
+}
