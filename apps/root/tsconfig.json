@@ -1,0 +1,9 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"outDir": "."
+	},
+	"exclude": ["dist"],
+	"extends": "@oauth2/typescript-config/vike.json",
+	"include": ["./src/**/*"]
+}

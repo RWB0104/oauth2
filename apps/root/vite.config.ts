@@ -1,0 +1,14 @@
+/**
+ * vite 설정 모듈
+ *
+ * @author RWB
+ * @since 2025.09.16 Tue 22:04:03
+ */
+
+import react from '@vitejs/plugin-react';
+import vike from 'vike/plugin';
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+	plugins: [vike(), react()]
+});
