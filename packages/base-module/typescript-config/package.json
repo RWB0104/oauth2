@@ -1,7 +1,7 @@
 {
+	"description": "tsconfig package for shared",
 	"license": "MIT",
 	"name": "@oauth2/typescript-config",
-	"private": true,
 	"publishConfig": {
 		"access": "public"
 	},

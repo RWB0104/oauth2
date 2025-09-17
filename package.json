@@ -1,15 +1,21 @@
 {
+	"dependencies": {
+		"react": "^19.1.1",
+		"react-dom": "^19.1.1"
+	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.2.4",
 		"@itcode-dev/biome-config": "^0.1.0",
+		"@types/react": "^19.1.12",
+		"@types/react-dom": "^19.1.9",
 		"turbo": "^2.5.6",
-		"typescript": "5.9.2"
+		"typescript": "^5.9.2"
 	},
 	"engines": {
 		"node": ">=22"
 	},
 	"name": "oauth2",
-	"packageManager": "pnpm@10.0.0",
+	"packageManager": "pnpm@10.15.0",
 	"private": true,
 	"scripts": {
 		"build": "turbo run build",

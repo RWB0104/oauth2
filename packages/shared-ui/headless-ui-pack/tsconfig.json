@@ -1,0 +1,22 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@oauth2/headless-ui-pack/*": ["./src/*"]
+		}
+	},
+	"extends": "@oauth2/typescript-config/vike.json",
+	"files": [],
+	"include": [],
+	"references": [
+		{
+			"path": "./tsconfig.lib.json"
+		},
+		{
+			"path": "./tsconfig.spec.json"
+		},
+		{
+			"path": "./tsconfig.storybook.json"
+		}
+	]
+}

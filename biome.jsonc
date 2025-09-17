@@ -89,12 +89,7 @@
 			"formatter": {
 				"enabled": false
 			},
-			"includes": [
-				"node_modules",
-				"**/node_modules",
-				"packages/base-ui/headless-ui-pack/src/components/**",
-				"__mocks__/zustand.ts"
-			],
+			"includes": ["node_modules", "**/node_modules", "packages/shared-ui/headless-ui-pack/src/**"],
 			"linter": {
 				"enabled": false
 			}

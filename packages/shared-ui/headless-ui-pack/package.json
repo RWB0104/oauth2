@@ -1,0 +1,25 @@
+{
+	"author": "RWB0104 <psj2716@gmail.com> (https://github.com/RWB0104)",
+	"dependencies": {
+		"@radix-ui/react-slot": "^1.2.3",
+		"class-variance-authority": "^0.7.1",
+		"clsx": "^2.1.1",
+		"lucide-react": "^0.544.0",
+		"tailwind-merge": "^3.3.1"
+	},
+	"description": "shadcn-ui component package",
+	"devDependencies": {
+		"@oauth2/typescript-config": "workspace:*",
+		"tailwindcss": "^4.1.13",
+		"tw-animate-css": "^1.3.8"
+	},
+	"exports": {
+		"./components/*": "./src/components/ui/*.tsx",
+		"./lib/*": "./src/lib/*.ts",
+		"./styles/*": "./src/styles/*.css"
+	},
+	"keywords": [],
+	"license": "ISC",
+	"name": "@oauth2/headless-ui-pack",
+	"version": "1.0.0"
+}
