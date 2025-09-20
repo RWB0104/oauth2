@@ -1,0 +1,14 @@
+/**
+ * Storybook 메인 모듈
+ *
+ * @author RWB
+ * @since 2025.09.21 Sun 03:30:42
+ */
+
+import { getStorybookConfig } from '../src/config/main';
+
+export default getStorybookConfig();
+
+// To customize your webpack configuration you can use the webpackFinal field.
+// Check https://storybook.js.org/docs/react/builders/webpack#extending-storybooks-webpack-config
+// and https://nx.dev/recipes/storybook/custom-builder-configs

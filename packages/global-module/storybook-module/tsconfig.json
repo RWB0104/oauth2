@@ -1,0 +1,10 @@
+{
+	"extends": "@oauth2/typescript-config/react-library.json",
+	"files": [],
+	"include": [],
+	"references": [
+		{
+			"path": "./tsconfig.lib.json"
+		}
+	]
+}

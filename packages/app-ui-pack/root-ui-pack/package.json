@@ -1,0 +1,27 @@
+{
+	"author": "RWB0104 <psj2716@gmail.com> (https://github.com/RWB0104)",
+	"dependencies": {
+		"@tanstack/react-query": "^5.89.0"
+	},
+	"description": "",
+	"devDependencies": {
+		"@oauth2/test-config": "workspace:*",
+		"@oauth2/typescript-config": "workspace:*",
+		"@tanstack/react-query-devtools": "^5.89.0"
+	},
+	"exports": {
+		"./components/atom/*": "./src/components/atom/*/index.ts",
+		"./components/molecule/*": "./src/components/molecule/*/index.ts",
+		"./components/organism/*": "./src/components/organism/*/index.ts",
+		"./components/template/*": "./src/components/template/*/index.ts"
+	},
+	"keywords": [],
+	"license": "ISC",
+	"name": "@auth2/root-ui-pack",
+	"scripts": {
+		"test": "vitest",
+		"test:run": "vitest run"
+	},
+	"type": "module",
+	"version": "1.0.0"
+}

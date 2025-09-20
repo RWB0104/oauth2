@@ -1,0 +1,10 @@
+{
+	"author": "RWB0104 <psj2716@gmail.com> (https://github.com/RWB0104)",
+	"description": "repository types",
+	"keywords": [],
+	"license": "ISC",
+	"main": "index.d.ts",
+	"name": "@types/oauth2",
+	"type": "module",
+	"version": "1.0.0"
+}
