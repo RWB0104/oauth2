@@ -1,0 +1,15 @@
+{
+	"author": "RWB0104 <psj2716@gmail.com> (https://github.com/RWB0104)",
+	"description": "test config package for shared",
+	"devDependencies": {
+		"@oauth2/node": "workspace:*",
+		"@oauth2/typescript-config": "workspace:*"
+	},
+	"exports": {
+		"./vitest": "./src/vitest/index.ts",
+		"./vitest/setup": "./src/vitest/setup.ts"
+	},
+	"license": "ISC",
+	"name": "@oauth2/test-config",
+	"version": "0.0.0"
+}

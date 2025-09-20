@@ -1,0 +1,12 @@
+{
+	"author": "RWB0104 <psj2716@gmail.com> (https://github.com/RWB0104)",
+	"description": "package for node environment",
+	"devDependencies": {
+		"@oauth2/typescript-config": "workspace:*"
+	},
+	"keywords": [],
+	"license": "ISC",
+	"main": "src/index.ts",
+	"name": "@oauth2/node",
+	"version": "1.0.0"
+}

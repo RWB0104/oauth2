@@ -1,0 +1,10 @@
+{
+	"extends": "@oauth2/typescript-config/base.json",
+	"files": [],
+	"include": [],
+	"references": [
+		{
+			"path": "./tsconfig.lib.json"
+		}
+	]
+}
