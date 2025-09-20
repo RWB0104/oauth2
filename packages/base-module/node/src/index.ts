@@ -21,7 +21,7 @@ export function getRootAtTurborepo(): string {
 /**
  * 루트 경로 반환
  *
- * @param {string} target: 대상 파일
+ * @param {string} target 대상 파일
  *
  * @returns {string} 루트 경로
  */
