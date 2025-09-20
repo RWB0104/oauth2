@@ -3,7 +3,7 @@
 	"dependencies": {
 		"@tanstack/react-query": "^5.89.0"
 	},
-	"description": "",
+	"description": "root ui package",
 	"devDependencies": {
 		"@oauth2/test-config": "workspace:*",
 		"@oauth2/typescript-config": "workspace:*",

@@ -15,8 +15,8 @@
 		"./config/*": "./src/config/*/index.ts",
 		"./styles/*": "./src/styles/*.css"
 	},
-	"license": "MIT",
+	"license": "ISC",
 	"name": "@oauth2/storybook-module",
 	"type": "module",
-	"version": "0.0.0"
+	"version": "1.0.0"
 }

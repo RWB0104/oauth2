@@ -8,5 +8,6 @@
 	"license": "ISC",
 	"main": "src/index.ts",
 	"name": "@oauth2/node",
+	"type": "module",
 	"version": "1.0.0"
 }

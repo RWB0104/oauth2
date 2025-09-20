@@ -27,11 +27,11 @@
 	},
 	"name": "oauth2",
 	"packageManager": "pnpm@10.15.0",
-	"private": true,
 	"scripts": {
 		"build": "turbo run build",
 		"check-types": "turbo run check-types",
 		"dev": "turbo run dev",
 		"lint": "turbo run lint"
-	}
+	},
+	"type": "module"
 }
