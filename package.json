@@ -6,13 +6,18 @@
 	"devDependencies": {
 		"@biomejs/biome": "^2.2.4",
 		"@itcode-dev/biome-config": "^0.1.0",
+		"@storybook/addon-docs": "^9.1.7",
+		"@storybook/addon-themes": "^9.1.7",
+		"@storybook/react-vite": "^9.1.7",
 		"@testing-library/dom": "^10.4.1",
 		"@testing-library/jest-dom": "^6.8.0",
 		"@testing-library/react": "^16.3.0",
 		"@types/node": "24.5.2",
+		"@types/oauth2": "workspace:*",
 		"@types/react": "^19.1.12",
 		"@types/react-dom": "^19.1.9",
 		"@vitest/coverage-v8": "^3.2.4",
+		"storybook": "^9.1.7",
 		"turbo": "^2.5.6",
 		"typescript": "^5.9.2",
 		"vitest": "^3.2.4"
