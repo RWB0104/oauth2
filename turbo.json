@@ -13,9 +13,9 @@
 			"cache": false,
 			"persistent": true
 		},
-		"lint": {
-			"dependsOn": ["^lint"]
-		}
+		"lint": {},
+		"storybook": {},
+		"storybook:build": {}
 	},
 	"ui": "tui"
 }
