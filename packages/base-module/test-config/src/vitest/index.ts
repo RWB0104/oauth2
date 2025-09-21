@@ -7,7 +7,7 @@ const rootPath = getRootAtTurborepo();
 /**
  * Vitest 설정 반환 메서드
  *
- * @param {string} name: 이름
+ * @param {string} name 이름
  *
  * @returns {ViteUserConfig} ViteUserConfig
  */
@@ -36,7 +36,7 @@ export function getVitestConfig(name: string): ViteUserConfig {
 /**
  * Vitest JSX 설정 반환 메서드
  *
- * @param {string} name: 이름
+ * @param {string} name 이름
  *
  * @returns {ViteUserConfig} ViteUserConfig
  */
