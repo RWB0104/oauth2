@@ -6,17 +6,26 @@
 		"@oauth2/typescript-config": "workspace:*",
 		"@tailwindcss/postcss": "^4.1.13",
 		"autoprefixer": "^10.4.21",
+		"clsx": "^2.1.1",
 		"postcss": "^8.5.6",
 		"tailwindcss": "^4.1.13",
 		"tw-animate-css": "^1.3.8"
 	},
 	"exports": {
+		"./components/atom/*": "./src/components/atom/*/index.ts",
 		"./components/template/*": "./src/components/template/*/index.ts",
 		"./config/*": "./src/config/*/index.ts",
-		"./styles/*": "./src/styles/*.css"
+		"./styles/*": "./src/styles/*.css",
+		"./utils": "./src/utils/index.ts"
 	},
 	"license": "ISC",
 	"name": "@oauth2/storybook-module",
+	"scripts": {
+		"storybook": "storybook dev",
+		"storybook:build": "storybook build",
+		"test": "vitest",
+		"test:run": "vitest run"
+	},
 	"type": "module",
 	"version": "1.0.0"
 }
