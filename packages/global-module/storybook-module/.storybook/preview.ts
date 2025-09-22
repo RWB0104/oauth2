@@ -6,16 +6,12 @@
  */
 
 import { withThemeByClassName } from '@storybook/addon-themes';
-import { create } from 'storybook/theming';
 
 import './index.css';
 
 import type { Preview } from '@storybook/react-vite';
 
-const customTheme = create({
-	base: 'dark',
-	fontBase: 'Pretendard, sans-serif'
-});
+import { baseTheme } from '../src/config/theme';
 
 const preview: Preview = {
 	decorators: [
@@ -50,7 +46,7 @@ const preview: Preview = {
 			}
 		}
 	},
-	parameters: { docs: { theme: customTheme } }
+	parameters: { docs: { theme: baseTheme } }
 };
 
 export default preview;

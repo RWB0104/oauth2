@@ -6,16 +6,12 @@
  */
 
 import { withThemeByClassName } from '@storybook/addon-themes';
-import { create } from 'storybook/theming';
 
 import '@oauth2/headless-ui-pack/styles/globals';
 
-import type { Preview } from '@storybook/react-vite';
+import { baseTheme } from '@oauth2/storybook-module/config/theme';
 
-const customTheme = create({
-	base: 'dark',
-	fontBase: 'Pretendard, sans-serif'
-});
+import type { Preview } from '@storybook/react-vite';
 
 const preview: Preview = {
 	decorators: [
@@ -50,7 +46,7 @@ const preview: Preview = {
 			}
 		}
 	},
-	parameters: { docs: { theme: customTheme } }
+	parameters: { docs: { theme: baseTheme } }
 };
 
 export default preview;
