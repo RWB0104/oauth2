@@ -5,9 +5,14 @@
 	},
 	"description": "root ui package",
 	"devDependencies": {
+		"@oauth2/headless-ui-pack": "workspace:*",
+		"@oauth2/storybook-module": "workspace:*",
 		"@oauth2/test-config": "workspace:*",
 		"@oauth2/typescript-config": "workspace:*",
-		"@tanstack/react-query-devtools": "^5.89.0"
+		"@tailwindcss/postcss": "^4.1.13",
+		"@tanstack/react-query-devtools": "^5.89.0",
+		"autoprefixer": "^10.4.21",
+		"postcss": "^8.5.6"
 	},
 	"exports": {
 		"./components/atom/*": "./src/components/atom/*/index.ts",
@@ -19,6 +24,8 @@
 	"license": "ISC",
 	"name": "@auth2/root-ui-pack",
 	"scripts": {
+		"storybook": "storybook dev",
+		"storybook:build": "storybook build",
 		"test": "vitest",
 		"test:run": "vitest run"
 	},

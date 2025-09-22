@@ -12,8 +12,7 @@
 		"tw-animate-css": "^1.3.8"
 	},
 	"exports": {
-		"./components/atom/*": "./src/components/atom/*/index.ts",
-		"./components/template/*": "./src/components/template/*/index.ts",
+		"./components/*": "./src/components/*/index.ts",
 		"./config/*": "./src/config/*/index.ts",
 		"./styles/*": "./src/styles/*.css",
 		"./utils": "./src/utils/index.ts"
