@@ -16,7 +16,7 @@ import QueryProvider from '.';
 type Story = StoryObj<QueryProviderProps>;
 
 const componentName = QueryProvider.name;
-const title: StroybookName = 'atom/Previewless';
+const title: StroybookName = 'organism/QueryProvider';
 const defaultArgsTypes = getArgType(componentName);
 
 const meta: Meta<QueryProviderProps> = {
@@ -36,7 +36,7 @@ const meta: Meta<QueryProviderProps> = {
 		}
 	},
 	component: QueryProvider,
-	parameters: getParameters('프리뷰리스 atom 컴포넌트', 'UI가 존재하지 않는 컴포넌트를 위한 Storybook 전용 더미 컴포넌트'),
+	parameters: getParameters('쿼리 프로바이더 organism 컴포넌트', '`react-query`를 래핑한 프로바이더 컴포넌트'),
 	tags: ['autodocs'],
 	title
 };
