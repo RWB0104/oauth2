@@ -1,5 +1,5 @@
 /**
- * 쿼리 클라이언트 organism 컴포넌트
+ * 쿼리 프로바이더 organism 컴포넌트
  *
  * @author RWB
  * @since 2025.09.21 Sun 01:47:32
@@ -12,7 +12,7 @@ const defaultClient = new QueryClient();
 export type QueryProviderProps = Partial<QueryClientProviderProps>;
 
 /**
- * 쿼리 클라이언트 organism 컴포넌트 반환 메서드
+ * 쿼리 프로바이더 organism 컴포넌트 반환 메서드
  *
  * @param {QueryProviderProps} param0 QueryProviderProps
  *
