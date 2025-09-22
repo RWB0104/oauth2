@@ -1,4 +1,5 @@
 /** biome-ignore-all lint/suspicious/noUnknownAtRules: this rules are knowns */
+@import url("https://font.itcode.dev/Pretendard/index.css");
 
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -120,9 +121,33 @@
 
 @layer base {
 	* {
+		user-select: none;
+
+		transition:
+			0.3s background,
+			color;
 		@apply border-border outline-ring/50;
 	}
+
+	code,
+	code *,
+	pre,
+	pre * {
+		user-select: text;
+	}
+
 	body {
 		@apply bg-background text-foreground;
 	}
+}
+
+@theme {
+	--default-font-family:
+		"Pretendard", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+		"Noto Color Emoji";
+
+	--font-header: "Playwrite AU SA", var(--default-font-family);
+
+	--breakpoint-xs: 30rem;
+	--breakpoint-2xs: 24rem;
 }
