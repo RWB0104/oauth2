@@ -7,12 +7,12 @@
 
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { getArgType, getParameters, type StroybookName } from '../../../utils';
+import { getArgType, getParameters, type StroybookName, SubCategory } from '../../../utils';
 import StorybookSection, { type StorybookSectionProps } from '.';
 
 type Story = StoryObj<StorybookSectionProps>;
 
-const componentName = 'StorybookSection';
+const componentName = StorybookSection.name;
 const title: StroybookName = 'template/StorybookSection';
 const defaultArgsTypes = getArgType(componentName);
 
@@ -28,6 +28,30 @@ const meta: Meta<StorybookSectionProps> = {
 		title: 'Lorem Ipsum'
 	},
 	argTypes: {
+		container: {
+			table: {
+				category: componentName,
+				subcategory: SubCategory.Props
+			}
+		},
+		subtitle: {
+			table: {
+				category: componentName,
+				subcategory: SubCategory.Props
+			}
+		},
+		title: {
+			table: {
+				category: componentName,
+				subcategory: SubCategory.Props
+			}
+		},
+		vertical: {
+			table: {
+				category: componentName,
+				subcategory: SubCategory.Props
+			}
+		},
 		...defaultArgsTypes
 	},
 	component: StorybookSection,

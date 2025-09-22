@@ -13,7 +13,7 @@ import Previewless from '.';
 
 type Story = StoryObj<PreviewlessProps>;
 
-const componentName = 'Previewless';
+const componentName = Previewless.name;
 const title: StroybookName = 'atom/Previewless';
 const defaultArgsTypes = getArgType(componentName);
 

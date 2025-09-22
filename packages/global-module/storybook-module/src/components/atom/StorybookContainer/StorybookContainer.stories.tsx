@@ -13,7 +13,7 @@ import StorybookContainer from '.';
 
 type Story = StoryObj<StorybookContainerProps>;
 
-const componentName = 'StorybookContainer';
+const componentName = StorybookContainer.name;
 const title: StroybookName = 'atom/StorybookContainer';
 const defaultArgsTypes = getArgType(componentName);
 
