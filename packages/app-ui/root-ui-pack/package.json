@@ -22,7 +22,7 @@
 	},
 	"keywords": [],
 	"license": "ISC",
-	"name": "@auth2/root-ui-pack",
+	"name": "@oauth2/root-ui-pack",
 	"scripts": {
 		"storybook": "storybook dev",
 		"storybook:build": "storybook build",
