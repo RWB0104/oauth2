@@ -136,6 +136,10 @@
 		user-select: text;
 	}
 
+	button {
+		cursor: pointer;
+	}
+
 	body {
 		@apply bg-background text-foreground;
 	}
