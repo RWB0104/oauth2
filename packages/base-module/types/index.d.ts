@@ -7,3 +7,5 @@
 
 /// <reference types="vitest/globals" />
 /// <reference types="@testing-library/jest-dom" />
+
+type Platform = 'google' | 'github' | 'kakao' | 'naver';
