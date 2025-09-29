@@ -15,7 +15,7 @@ import Icon from '.';
 
 type Story = StoryObj<IconProps>;
 
-const icons: IconName[] = ['GitHubIcon', 'GoogleIcon', 'KakaoIcon'];
+const icons: IconName[] = ['GitHubIcon', 'GoogleIcon', 'KakaoIcon', 'NaverIcon'];
 
 const componentName = Icon.name;
 const title: StroybookName = 'atom/Icon';
@@ -27,7 +27,29 @@ const meta: Meta<IconProps> = {
 	},
 	argTypes: {
 		...defaultArgsTypes,
+		fill: {
+			control: 'color',
+			description: '채우기 색상',
+			table: {
+				category: componentName,
+				subcategory: SubCategory.Props
+			}
+		},
+		height: {
+			description: '높이',
+			table: {
+				category: componentName,
+				subcategory: SubCategory.Props
+			}
+		},
 		icon: {
+			table: {
+				category: componentName,
+				subcategory: SubCategory.Props
+			}
+		},
+		width: {
+			description: '너비',
 			table: {
 				category: componentName,
 				subcategory: SubCategory.Props
@@ -53,6 +75,9 @@ export const Playground: Story = {
 };
 
 export const All: Story = {
+	argTypes: {
+		icon: { control: { disable: true } }
+	},
 	render: (props) => (
 		<StorybookSection subtitle="전체 아이콘 예시" title="All Icons">
 			{icons.map((icon) => (
