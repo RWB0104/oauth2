@@ -10,7 +10,7 @@ import { render } from '@testing-library/react';
 import type { IconName } from '.';
 import Icon from '.';
 
-const icons: IconName[] = ['GitHubIcon', 'GoogleIcon', 'KakaoIcon'];
+const icons: IconName[] = ['GitHubIcon', 'GoogleIcon', 'KakaoIcon', 'NaverIcon'];
 
 describe('[@oauth2/root-ui-pack] 아이콘 atom 컴포넌트 테스트', () => {
 	it.each(icons)('기본 렌더링 테스트 (%s)', (icon) => {
