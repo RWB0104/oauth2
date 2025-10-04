@@ -1,0 +1,22 @@
+{
+	"author": "RWB0104 <psj2716@gmail.com> (https://github.com/RWB0104)",
+	"dependencies": {
+		"zustand": "^5.0.8"
+	},
+	"description": "store package",
+	"devDependencies": {
+		"@oauth2/test-config": "workspace:*",
+		"@oauth2/typescript-config": "workspace:*"
+	},
+	"exports": {
+		"./*": "./src/*/index.ts"
+	},
+	"keywords": [],
+	"license": "ISC",
+	"name": "@oauth2/store",
+	"scripts": {
+		"test": "vitest",
+		"test:run": "vitest run"
+	},
+	"version": "1.0.0"
+}
