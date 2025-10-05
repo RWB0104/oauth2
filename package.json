@@ -33,7 +33,9 @@
 		"dev": "turbo run dev",
 		"lint": "turbo run lint",
 		"storybook": "turbo run storybook",
-		"storybook:build": "turbo run storybook:build"
+		"storybook:build": "turbo run storybook:build",
+		"test": "turbo run test",
+		"test:run": "turbo run test:run"
 	},
 	"type": "module"
 }

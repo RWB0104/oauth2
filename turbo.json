@@ -15,7 +15,9 @@
 		},
 		"lint": {},
 		"storybook": {},
-		"storybook:build": {}
+		"storybook:build": {},
+		"test": {},
+		"test:run": {}
 	},
 	"ui": "tui"
 }
