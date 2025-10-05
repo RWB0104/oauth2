@@ -11,3 +11,6 @@
 type Platform = 'google' | 'github' | 'kakao' | 'naver';
 
 type Theme = 'light' | 'dark';
+
+type SetStoreFunc<T> = (state: T) => T;
+type SetStoreHandler<T> = (state: T | SetStoreFunc<T>) => void;
