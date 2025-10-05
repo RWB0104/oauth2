@@ -7,6 +7,7 @@
 
 import { create } from 'zustand';
 
+export type SetThemeStateHandler = SetStoreHandler<Theme | undefined>;
 export type ThemeStateHandler = () => void;
 
 export interface ThemeStoreProps {
@@ -14,6 +15,11 @@ export interface ThemeStoreProps {
 	 * 테마
 	 */
 	themeState?: Theme;
+
+	/**
+	 * 테마 할당 메서드
+	 */
+	setThemeState: SetThemeStateHandler;
 
 	/**
 	 * 테마 토글 핸들러
@@ -31,6 +37,15 @@ export const themeStore = create<ThemeStoreProps>((set, get) => ({
 		set((state) => ({
 			...state,
 			themeState: undefined
+		}));
+	},
+	setThemeState: (state) => {
+		const { themeState } = get();
+		const theme = typeof state === 'function' ? state(themeState) : state;
+
+		set((s) => ({
+			...s,
+			themeState: theme
 		}));
 	},
 	toogleThemeState: () => {
