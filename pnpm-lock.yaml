@@ -123,6 +123,9 @@ importers:
       '@oauth2/headless-ui-pack':
         specifier: workspace:*
         version: link:../../shared-ui/headless-ui-pack
+      '@oauth2/store':
+        specifier: workspace:*
+        version: link:../../app-module/store
       '@oauth2/storybook-module':
         specifier: workspace:*
         version: link:../../global-module/storybook-module

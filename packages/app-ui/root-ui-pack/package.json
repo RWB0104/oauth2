@@ -6,6 +6,7 @@
 	"description": "root ui package",
 	"devDependencies": {
 		"@oauth2/headless-ui-pack": "workspace:*",
+		"@oauth2/store": "workspace:*",
 		"@oauth2/storybook-module": "workspace:*",
 		"@oauth2/test-config": "workspace:*",
 		"@oauth2/typescript-config": "workspace:*",
