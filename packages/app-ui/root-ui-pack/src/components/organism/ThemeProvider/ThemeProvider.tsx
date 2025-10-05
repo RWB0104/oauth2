@@ -7,14 +7,18 @@
 
 import { themeStore } from '@oauth2/store/theme';
 
-import { useEffect, useLayoutEffect } from 'react';
+import { type PropsWithChildren, useEffect, useLayoutEffect } from 'react';
 
 const themeKey = 'theme';
 
 /**
- * 테마 프로바이더 organism 컴포넌트 메서드
+ * 테마 프로바이더 organism 컴포넌트 반환 메서드
+ *
+ * @param {PropsWithChildren} param0 PropsWithChildren
+ *
+ * @returns {React.JSX.Element} JSX
  */
-export default function ThemeProvider(): null {
+export default function ThemeProvider({ children }: PropsWithChildren): React.JSX.Element {
 	const { themeState, setThemeState } = themeStore();
 
 	/**
@@ -58,5 +62,5 @@ export default function ThemeProvider(): null {
 		}
 	}, [setThemeState]);
 
-	return null;
+	return <>{children}</>;
 }

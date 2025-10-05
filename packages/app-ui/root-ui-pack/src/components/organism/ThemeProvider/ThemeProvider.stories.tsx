@@ -11,10 +11,11 @@ import { themeStore } from '@oauth2/store/theme';
 import { getParameters, type StroybookName } from '@oauth2/storybook-module/utils';
 
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import type { PropsWithChildren } from 'react';
 
 import ThemeProvider from '.';
 
-type Story = StoryObj;
+type Story = StoryObj<PropsWithChildren>;
 
 const title: StroybookName = 'organism/ThemeProvider';
 
@@ -24,15 +25,16 @@ function ChildComp(): React.JSX.Element {
 	return <Button onClick={toogleThemeState}>{themeState} 테마</Button>;
 }
 
-const meta: Meta = {
+const meta: Meta<PropsWithChildren> = {
+	args: {
+		children: (
+			<main className="flex w-full items-center justify-center">
+				<ChildComp />
+			</main>
+		)
+	},
 	component: ThemeProvider,
 	parameters: getParameters('테마 프로바이더 organism 컴포넌트', '테마 관리를 위한 테마 프로바이더 컴포넌트'),
-	render: () => (
-		<main className="flex w-full items-center justify-center">
-			<ThemeProvider />
-			<ChildComp />
-		</main>
-	),
 	tags: ['autodocs'],
 	title
 };
