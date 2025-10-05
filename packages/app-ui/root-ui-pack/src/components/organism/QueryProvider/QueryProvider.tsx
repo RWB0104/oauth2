@@ -6,6 +6,7 @@
  */
 
 import { QueryClient, QueryClientProvider, type QueryClientProviderProps } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
 const defaultClient = new QueryClient();
 
@@ -19,5 +20,11 @@ export type QueryProviderProps = Partial<QueryClientProviderProps>;
  * @returns {React.JSX.Element} JSX
  */
 export default function QueryProvider({ client = defaultClient, children }: QueryProviderProps): React.JSX.Element {
-	return <QueryClientProvider client={client}>{children}</QueryClientProvider>;
+	return (
+		<QueryClientProvider client={client}>
+			{children}
+
+			<ReactQueryDevtools />
+		</QueryClientProvider>
+	);
 }
