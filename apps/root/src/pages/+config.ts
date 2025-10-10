@@ -12,7 +12,8 @@ import vikeReact from 'vike-react/config';
 // https://vike.dev/config
 
 export default {
-	description: 'Demo showcasing Vike',
+	description: 'OAuth2 project',
 	extends: vikeReact,
-	title: 'My Vike App'
+	prerender: true,
+	title: 'OAuth2'
 } satisfies Config;
