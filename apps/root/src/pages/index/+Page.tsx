@@ -5,8 +5,6 @@
  * @since 2025.09.16 Tue 22:05:30
  */
 
-import '@oauth2/headless-ui-pack/styles/globals';
-
 import AuthButton from '@oauth2/root-ui-pack/components/atom/AuthButton';
 
 const platforms: Platform[] = ['github', 'google', 'kakao', 'naver'];

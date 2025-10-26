@@ -10,6 +10,8 @@ import ThemeProvider from '@oauth2/root-ui-pack/components/organism/ThemeProvide
 
 import type { PropsWithChildren } from 'react';
 
+import '@oauth2/headless-ui-pack/styles/globals';
+
 /**
  * 루트 레이아웃 컴포넌트 반환 메서드
  *
