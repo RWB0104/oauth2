@@ -1,6 +1,8 @@
 {
 	"$schema": "https://turborepo.com/schema.json",
 	"tasks": {
+		"api:dev": { "cache": false },
+		"api:prd": { "cache": false },
 		"build": {
 			"dependsOn": ["^build"],
 			"inputs": ["$TURBO_DEFAULT$", ".env*"],

@@ -95,6 +95,23 @@
 			}
 		},
 		{
+			"includes": ["packages/app-module/api/generated/**"],
+			"linter": {
+				"rules": {
+					"nursery": {
+						"useConsistentTypeDefinitions": "off"
+					},
+					"style": {
+						"useExportsLast": "off",
+						"useNamingConvention": "off"
+					},
+					"suspicious": {
+						"useAwait": "off"
+					}
+				}
+			}
+		},
+		{
 			"includes": ["**/*.d.ts"],
 			"linter": {
 				"rules": {

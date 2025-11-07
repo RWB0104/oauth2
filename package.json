@@ -28,6 +28,8 @@
 	"name": "oauth2",
 	"packageManager": "pnpm@10.15.0",
 	"scripts": {
+		"api:dev": "turbo run api:dev",
+		"api:prd": "turbo run api:prd",
 		"build": "turbo run build",
 		"check-types": "turbo run check-types",
 		"dev": "turbo run dev",
