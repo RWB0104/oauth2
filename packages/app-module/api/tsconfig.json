@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@oauth2/api/internal/*": ["./src/*"]
+		}
+	},
+	"extends": "@oauth2/typescript-config/base.json",
+	"files": [],
+	"include": [],
+	"references": [
+		{
+			"path": "./tsconfig.lib.json"
+		},
+		{
+			"path": "./tsconfig.spec.json"
+		}
+	]
+}

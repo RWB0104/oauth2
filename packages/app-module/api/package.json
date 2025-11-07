@@ -1,0 +1,27 @@
+{
+	"author": "RWB0104 <psj2716@gmail.com> (https://github.com/RWB0104)",
+	"dependencies": {
+		"@tanstack/react-query": "^5.89.0"
+	},
+	"description": "store package",
+	"devDependencies": {
+		"@oauth2/test-config": "workspace:*",
+		"@oauth2/typescript-config": "workspace:*",
+		"orval": "^7.15.0"
+	},
+	"exports": {
+		"./*": "./generated/*.ts",
+		"./internal/*": "./src/*/index.ts"
+	},
+	"keywords": [],
+	"license": "ISC",
+	"name": "@oauth2/api",
+	"scripts": {
+		"api:dev": "orval -c ./orval.config.dev.ts",
+		"api:prd": "orval -c ./orval.config.prd.ts",
+		"test": "vitest",
+		"test:run": "vitest run"
+	},
+	"type": "module",
+	"version": "1.0.0"
+}
