@@ -35,3 +35,7 @@ interface VitePrerenderProps<T> {
 }
 
 type VitePrerenderReturns<T = unknown> = string | VitePrerenderProps<T>;
+
+interface Body {
+	json<T>(): Promise<T>;
+}
