@@ -5,7 +5,7 @@
  * @since 2025.09.21 Sun 03:30:42
  */
 
-import { getStorybookConfig } from '../src/config/main';
+import { getStorybookConfig } from '@oauth2/storybook-module/config/main';
 
 export default getStorybookConfig();
 

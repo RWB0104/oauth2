@@ -9,23 +9,25 @@ import { withThemeByClassName } from '@storybook/addon-themes';
 
 import './index.css';
 
-import type { Preview } from '@storybook/react-vite';
+import { baseTheme } from '@oauth2/storybook-module/config/theme';
 
-import { baseTheme } from '../src/config/theme';
+import { ThemeEnum } from '@oauth2/constant/theme';
+
+import type { Preview } from '@storybook/react-vite';
 
 const preview: Preview = {
 	decorators: [
 		withThemeByClassName({
-			defaultTheme: 'dark',
+			defaultTheme: ThemeEnum.Dark,
 			themes: {
-				dark: 'dark',
+				dark: ThemeEnum.Dark,
 				light: ''
 			}
 		})
 	],
 	globalTypes: {
 		theme: {
-			defaultValue: 'dark',
+			defaultValue: ThemeEnum.Dark,
 			description: 'Global theme for components',
 			name: 'Theme',
 			toolbar: {
@@ -34,12 +36,12 @@ const preview: Preview = {
 					{
 						icon: 'sun',
 						title: 'Light Mode',
-						value: 'light'
+						value: ThemeEnum.Light
 					},
 					{
 						icon: 'moon',
 						title: 'Dark Mode',
-						value: 'dark'
+						value: ThemeEnum.Dark
 					}
 				],
 				showName: true

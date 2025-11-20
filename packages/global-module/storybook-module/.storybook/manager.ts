@@ -9,6 +9,6 @@ import { addons } from 'storybook/manager-api';
 
 import '../src/styles/manager.css';
 
-import { baseTheme } from '../src/config/theme';
+import { baseTheme } from '@oauth2/storybook-module/config/theme';
 
 addons.setConfig({ theme: baseTheme });
