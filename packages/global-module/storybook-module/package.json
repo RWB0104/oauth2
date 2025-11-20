@@ -2,6 +2,7 @@
 	"author": "RWB0104 <psj2716@gmail.com> (https://github.com/RWB0104)",
 	"description": "storybook module package",
 	"devDependencies": {
+		"@oauth2/constant": "workspace:*",
 		"@oauth2/test-config": "workspace:*",
 		"@oauth2/typescript-config": "workspace:*",
 		"@tailwindcss/postcss": "^4.1.13",

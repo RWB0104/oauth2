@@ -3,8 +3,7 @@
 	"description": "repository types",
 	"keywords": [],
 	"license": "ISC",
-	"main": "index.d.ts",
 	"name": "@types/oauth2",
-	"type": "module",
+	"types": "index.d.ts",
 	"version": "1.0.0"
 }
