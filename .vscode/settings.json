@@ -1,8 +1,8 @@
 {
-	"eslint.workingDirectories": [
-		{
-			"mode": "auto"
-		}
-	],
-	"tailwindCSS.experimental.configFile": "./packages/shared-ui/headless-ui-pack/src/styles/globals.css"
+	"tailwindCSS.experimental.configFile": "./packages/shared-ui/headless-ui-pack/src/styles/globals.css",
+	"typescript.preferences.importModuleSpecifier": "non-relative",
+	"typescript.preferences.preferTypeOnlyAutoImports": true,
+	"typescript.referencesCodeLens.enabled": true,
+	"typescript.referencesCodeLens.showOnAllFunctions": true,
+	"typescript.tsdk": "node_modules\\typescript\\lib"
 }
