@@ -28,32 +28,28 @@
 									":BLANK_LINE:",
 									["@oauth2/root", "@oauth2/root/**"],
 									":BLANK_LINE:",
-									[
-										"@oauth2/base-app-ui-pack",
-										"@oauth2/base-app-ui-pack/**",
-										"@oauth2/blog-ui-pack",
-										"@oauth2/blog-ui-pack/**",
-										"@oauth2/piedit-ui-pack",
-										"@oauth2/piedit-ui-pack/**",
-										"@oauth2/root-ui-pack",
-										"@oauth2/root-ui-pack/**"
-									],
+									["@oauth2/root-ui-pack", "@oauth2/root-ui-pack/**"],
 									":BLANK_LINE:",
 									["@oauth2/global-ui-pack", "@oauth2/global-ui-pack/**"],
 									":BLANK_LINE:",
 									["@oauth2/headless-ui-pack", "@oauth2/headless-ui-pack/**"],
 									":BLANK_LINE:",
-									["@oauth2/api", "@oauth2/api/**", "@oauth2/state", "@oauth2/state/**"],
+									["@oauth2/api", "@oauth2/api/**", "@oauth2/store", "@oauth2/store/**"],
 									":BLANK_LINE:",
 									[
-										"@oauth2/common",
-										"@oauth2/common/**",
+										"@oauth2/storybook-module",
+										"@oauth2/storybook-module/**",
+										"@oauth2/util-module",
+										"@oauth2/util-module/**"
+									],
+									":BLANK_LINE:",
+									[
+										"@oauth2/constant",
+										"@oauth2/constant/**",
+										"@oauth2/node",
+										"@oauth2/node/**",
 										"@oauth2/test-config",
-										"@oauth2/test-config/**",
-										"@oauth2/markdown",
-										"@oauth2/markdown/**",
-										"@oauth2/storybook",
-										"@oauth2/storybook/**"
+										"@oauth2/test-config/**"
 									],
 									":BLANK_LINE:",
 									["@oauth2/**"],
@@ -78,6 +74,9 @@
 					},
 					"nursery": {
 						"noUnresolvedImports": "off"
+					},
+					"performance": {
+						"noImgElement": "off"
 					}
 				}
 			}
@@ -106,6 +105,7 @@
 						"useNamingConvention": "off"
 					},
 					"suspicious": {
+						"noShadowRestrictedNames": "off",
 						"useAwait": "off"
 					}
 				}
