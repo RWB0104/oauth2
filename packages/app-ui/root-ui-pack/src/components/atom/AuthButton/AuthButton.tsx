@@ -7,6 +7,8 @@
 
 import { cn } from '@oauth2/headless-ui-pack/lib/utils';
 
+import { PlatformEnum } from '@oauth2/constant/platform';
+
 import type { AnchorHTMLAttributes, DetailedHTMLProps } from 'react';
 
 import Icon from '../Icon';
@@ -39,10 +41,10 @@ export default function AuthButton({ platform, className, ...props }: AuthButton
 			className={cn(
 				'inline-flex items-center justify-center gap-3 rounded-md px-4 py-2 shadow transition-all duration-300 hover:opacity-75 hover:brightness-95',
 				{
-					'bg-[#02C759]': platform === 'naver',
-					'bg-[#FEE500]': platform === 'kakao',
-					'bg-black': platform === 'github',
-					'bg-white': platform === 'google'
+					'bg-black': platform === PlatformEnum.Github,
+					'bg-kakao': platform === PlatformEnum.Kakao,
+					'bg-naver': platform === PlatformEnum.Naver,
+					'bg-white': platform === PlatformEnum.Google
 				},
 				className
 			)}
@@ -52,16 +54,16 @@ export default function AuthButton({ platform, className, ...props }: AuthButton
 			{...props}
 		>
 			<div className="aspect-square size-4">
-				{platform === 'github' && <Icon fill="white" icon="GitHubIcon" />}
-				{platform === 'google' && <Icon icon="GoogleIcon" />}
-				{platform === 'kakao' && <Icon fill="black" icon="KakaoIcon" />}
-				{platform === 'naver' && <Icon fill="white" icon="NaverIcon" />}
+				{platform === PlatformEnum.Github && <Icon fill="white" icon="GitHubIcon" />}
+				{platform === PlatformEnum.Google && <Icon icon="GoogleIcon" />}
+				{platform === PlatformEnum.Kakao && <Icon fill="black" icon="KakaoIcon" />}
+				{platform === PlatformEnum.Naver && <Icon fill="white" icon="NaverIcon" />}
 			</div>
 
 			<p
 				className={cn({
-					'text-black': platform === 'google' || platform === 'kakao',
-					'text-white': platform === 'github' || platform === 'naver'
+					'text-black': platform === PlatformEnum.Google || platform === PlatformEnum.Kakao,
+					'text-white': platform === PlatformEnum.Github || platform === PlatformEnum.Naver
 				})}
 			>
 				{labels[platform]} 아이디로 로그인

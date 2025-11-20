@@ -5,6 +5,8 @@
  * @since 2025.10.05 Sun 01:08:34
  */
 
+import { ThemeEnum } from '@oauth2/constant/theme';
+
 import { create } from 'zustand';
 
 export type SetThemeStateHandler = SetStoreHandler<Theme | undefined>;
@@ -51,7 +53,7 @@ export const themeStore = create<ThemeStoreProps>((set, get) => ({
 	toogleThemeState: () => {
 		const { themeState } = get();
 
-		const to: Theme = themeState === 'dark' ? 'light' : 'dark';
+		const to: Theme = themeState === ThemeEnum.Dark ? ThemeEnum.Light : ThemeEnum.Dark;
 
 		set((state) => ({
 			...state,

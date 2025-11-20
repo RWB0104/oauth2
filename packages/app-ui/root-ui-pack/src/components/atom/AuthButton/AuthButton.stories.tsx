@@ -8,6 +8,8 @@
 import StorybookSection from '@oauth2/storybook-module/components/template/StorybookSection';
 import { getArgType, getParameters, type StroybookName, SubCategory } from '@oauth2/storybook-module/utils';
 
+import { PlatformEnum } from '@oauth2/constant/platform';
+
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import type { AuthButtonProps } from '.';
@@ -15,7 +17,7 @@ import AuthButton from '.';
 
 type Story = StoryObj<AuthButtonProps>;
 
-const platforms: Platform[] = ['github', 'google', 'kakao', 'naver'];
+const platforms: Platform[] = [PlatformEnum.Github, PlatformEnum.Google, PlatformEnum.Kakao, PlatformEnum.Naver];
 
 const componentName = AuthButton.name;
 const title: StroybookName = 'atom/AuthButton';
@@ -23,7 +25,7 @@ const defaultArgsTypes = getArgType(componentName);
 
 const meta: Meta<AuthButtonProps> = {
 	args: {
-		platform: 'github'
+		platform: PlatformEnum.Github
 	},
 	argTypes: {
 		...defaultArgsTypes,

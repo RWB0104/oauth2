@@ -7,11 +7,13 @@
 
 import { type ThemeStoreProps, themeStore } from '@oauth2/store/theme';
 
+import { ThemeEnum } from '@oauth2/constant/theme';
+
 import { act, render, renderHook } from '@testing-library/react';
 
 import ThemeProvider from '.';
 
-const themes: Theme[] = ['light', 'dark'];
+const themes: Theme[] = [ThemeEnum.Light, ThemeEnum.Dark];
 
 describe('[@oauth2/root-ui-pack] 테마 프로바이더 organism 컴포넌트 테스트', () => {
 	it('기본 렌더링 테스트', () => {

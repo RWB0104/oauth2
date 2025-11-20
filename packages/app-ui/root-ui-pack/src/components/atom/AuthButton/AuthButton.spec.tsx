@@ -5,11 +5,13 @@
  * @since 2025.09.30 Tue 03:06:59
  */
 
+import { PlatformEnum } from '@oauth2/constant/platform';
+
 import { render, screen } from '@testing-library/react';
 
 import AuthButton from '.';
 
-const platforms: Platform[] = ['github', 'google', 'kakao', 'naver'];
+const platforms: Platform[] = [PlatformEnum.Github, PlatformEnum.Google, PlatformEnum.Kakao, PlatformEnum.Naver];
 
 describe('[oauth2/root-ui-pack] 인증 버튼 atom 컴포넌트 테스트', () => {
 	describe.each(platforms)('%s 인증 버튼 테스트', (platform) => {

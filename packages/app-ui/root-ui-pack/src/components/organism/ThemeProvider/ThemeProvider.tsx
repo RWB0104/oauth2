@@ -7,6 +7,8 @@
 
 import { themeStore } from '@oauth2/store/theme';
 
+import { ThemeEnum } from '@oauth2/constant/theme';
+
 import { type PropsWithChildren, useEffect, useLayoutEffect } from 'react';
 
 const themeKey = 'theme';
@@ -29,7 +31,7 @@ export default function ThemeProvider({ children }: PropsWithChildren): React.JS
 
 		// 테마가 유효하고, 이전 테마와 일치하지 않는 경우 localStorage에 반영
 		if (themeState && value !== themeState) {
-			document.documentElement.classList.remove(themeState === 'dark' ? 'light' : 'dark');
+			document.documentElement.classList.remove(themeState === ThemeEnum.Dark ? ThemeEnum.Light : ThemeEnum.Dark);
 			document.documentElement.classList.add(themeState);
 
 			window.localStorage.setItem(themeKey, themeState);
@@ -37,8 +39,8 @@ export default function ThemeProvider({ children }: PropsWithChildren): React.JS
 
 		// 지정된 테마가 없지만, localStorage엔 있을 경우 제거
 		else if (value) {
-			document.documentElement.classList.remove('light');
-			document.documentElement.classList.remove('dark');
+			document.documentElement.classList.remove(ThemeEnum.Light);
+			document.documentElement.classList.remove(ThemeEnum.Dark);
 
 			window.localStorage.removeItem(themeKey);
 		}
@@ -51,8 +53,8 @@ export default function ThemeProvider({ children }: PropsWithChildren): React.JS
 		const theme = window.localStorage.getItem(themeKey);
 
 		switch (theme) {
-			case 'light':
-			case 'dark':
+			case ThemeEnum.Light:
+			case ThemeEnum.Dark:
 				setThemeState(theme);
 				break;
 

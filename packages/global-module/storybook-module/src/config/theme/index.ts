@@ -5,9 +5,11 @@
  * @since 2025.09.21 Sun 03:29:32
  */
 
+import { ThemeEnum } from '@oauth2/constant/theme';
+
 import { create } from 'storybook/theming';
 
 export const baseTheme = create({
-	base: 'dark',
+	base: ThemeEnum.Dark,
 	fontBase: 'Pretendard, sans-serif'
 });
