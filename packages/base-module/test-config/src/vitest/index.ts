@@ -24,6 +24,9 @@ export function getVitestConfig(name: string): ViteUserConfig {
 					'100': true
 				}
 			},
+			deps: {
+				interopDefault: true
+			},
 			environment: 'jsdom',
 			globals: true,
 			name,

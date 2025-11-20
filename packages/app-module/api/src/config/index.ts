@@ -5,6 +5,7 @@
  * @since 2025.10.29 Wed 01:15:42
  */
 
+import type { QueryOptions } from '@tanstack/react-query';
 import type { ConfigExternal, OutputClient, OutputOptions } from 'orval';
 
 const baseDir = './generated';
@@ -62,6 +63,10 @@ export function getConfig(env: ApiEnv): ConfigExternal {
 	const input = oas[env];
 	const baseUrl = baseUrls[env];
 
+	const options: QueryOptions = {
+		retry: 0
+	};
+
 	return {
 		fetch: {
 			input,
@@ -89,6 +94,9 @@ export function getConfig(env: ApiEnv): ConfigExternal {
 						},
 						name: 'queryFetcher',
 						path: './src/fetcher/index.ts'
+					},
+					query: {
+						options
 					}
 				}
 			})
