@@ -11,5 +11,6 @@ import vike from 'vike/plugin';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
+	base: '/oauth2',
 	plugins: [vike(), react(), tailwindcss()]
 });

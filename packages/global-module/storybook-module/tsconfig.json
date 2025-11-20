@@ -1,4 +1,9 @@
 {
+	"compilerOptions": {
+		"paths": {
+			"@oauth2/storybook-module/config/*": ["./src/config/*/index.ts"]
+		}
+	},
 	"extends": "@oauth2/typescript-config/react-library.json",
 	"files": [],
 	"include": [],

@@ -5,6 +5,7 @@
 	},
 	"description": "store package",
 	"devDependencies": {
+		"@oauth2/constant": "workspace:*",
 		"@oauth2/test-config": "workspace:*",
 		"@oauth2/typescript-config": "workspace:*"
 	},

@@ -1,6 +1,5 @@
 {
-	"extends": "@oauth2/typescript-config/base.json",
-	"files": [],
+	"extends": "@oauth2/typescript-config/react-library.json",
 	"include": [],
 	"references": [
 		{
