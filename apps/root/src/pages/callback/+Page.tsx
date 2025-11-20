@@ -5,7 +5,10 @@
  * @since 2025.10.05 Sun 23:41:09
  */
 
-import { useCallback, useEffect } from 'react';
+import { tokenStore } from '@oauth2/store/token';
+
+import { useEffect } from 'react';
+import { navigate } from 'vike/client/router';
 import { usePageContext } from 'vike-react/usePageContext';
 
 /**
@@ -18,31 +21,33 @@ export default function CallbackPage(): React.JSX.Element {
 		urlParsed: { search }
 	} = usePageContext();
 
-	const getMeApi = useCallback(async (token: string) => {
-		const response = await fetch('http://localhost:8080/api/me', {
-			headers: {
-				// biome-ignore lint/style/useNamingConvention: just header name
-				Authorization: `Bearer ${token}`
-			},
-			method: 'GET'
-		});
-
-		if (response.ok) {
-			const json = await response.json();
-
-			// biome-ignore lint/suspicious/noConsole: for test
-			console.log(json);
-		}
-	}, []);
+	const { setTokenState } = tokenStore();
 
 	useEffect(() => {
-		const { token } = search;
+		// 토큰이 유효할 경우
+		if (search?.token) {
+			setTokenState(search.token);
 
-		if (token) {
-			// biome-ignore lint/nursery/noFloatingPromises: for test
-			getMeApi(token);
+			sessionStorage.setItem('access-token', search.token);
+
+			// biome-ignore lint/nursery/noFloatingPromises: need float
+			navigate('/oauth2/me', { overwriteLastHistoryEntry: true });
 		}
-	}, [search, getMeApi]);
 
-	return <div>2342</div>;
+		// 토큰이 유효하지 않을 경우
+		else {
+			location.replace('/error');
+
+			setTokenState(undefined);
+
+			// biome-ignore lint/nursery/noFloatingPromises: need float
+			navigate('/oauth2/error', { overwriteLastHistoryEntry: true });
+		}
+	}, [search, setTokenState]);
+
+	return (
+		<div className="flex h-dvh w-full items-center justify-center bg-black/50">
+			<div className="size-14 animate-spin rounded-full border-t-4 border-l-4" />
+		</div>
+	);
 }

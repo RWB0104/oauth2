@@ -21,7 +21,7 @@ import '@oauth2/headless-ui-pack/styles/globals';
  */
 export default function RootLayout({ children }: PropsWithChildren): React.JSX.Element {
 	return (
-		<main data-component="RootLayout">
+		<main className="bg-linear-to-b from-gradient-top/50 to-gradient-bottom/50" data-component="RootLayout">
 			<QueryProvider>
 				<ThemeProvider>{children}</ThemeProvider>
 			</QueryProvider>
