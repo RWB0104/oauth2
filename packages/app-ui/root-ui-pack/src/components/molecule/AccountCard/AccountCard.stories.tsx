@@ -107,10 +107,7 @@ const meta: Meta<AccountCardProps> = {
 		}
 	},
 	component: AccountCard,
-	parameters: getParameters(
-		'아이콘 atom 컴포넌트',
-		'커스텀 SVG 아이콘 컴포넌트. `icon`을 통해 기 정의된 아이콘을 간편하게 사용 가능'
-	),
+	parameters: getParameters('계정 카드 molecule 컴포넌트', '계정 정보를 표현하기 위한 컴포넌트'),
 	tags: ['autodocs'],
 	title
 };
