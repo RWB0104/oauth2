@@ -15,6 +15,9 @@ import { baseTheme } from '@oauth2/storybook-module/config/theme';
 import { ThemeEnum } from '@oauth2/constant/theme';
 
 import type { Preview } from '@storybook/react-vite';
+import { sb } from 'storybook/test';
+
+sb.mock(import('@oauth2/api/react-query/me-controller/me-controller'));
 
 const preview: Preview = {
 	decorators: [
